@@ -1,0 +1,80 @@
+
+        <form >
+            
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Email </mat-label>
+                        <input type="text" matInput id="Email" name="Email" required>
+                    </mat-form-field>    
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Nom </mat-label>
+                        <input type="text" matInput id="Nom" name="Nom" required>
+                    </mat-form-field>    
+                </div>
+
+                
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Prenom </mat-label>
+                        <input type="text" matInput id="Prenom" name="Prenom" required>
+                    </mat-form-field>    
+                </div>
+               
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Telephone </mat-label>
+                        <input type="tel" matInput id="Telephone" name="Telephone" >
+                    </mat-form-field>    
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Type </mat-label>
+                        <input type="text" matInput id="Type" name="Type" >
+                    </mat-form-field>    
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Organisme </mat-label>
+                        <input type="number" matInput id="Organisme" name="Organisme" >
+                    </mat-form-field>    
+                </div>
+               
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Pays </mat-label>
+                        <input type="number" matInput id="Pays" name="Pays" >
+                    </mat-form-field>    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Profil </mat-label>
+                        <input type="number" matInput id="Profil" name="Profil" >
+                    </mat-form-field>    
+                </div>
+            </div>
+
+
+            <div>
+                <button mat-button class="btn-danger" TYPE="reset" style="margin-top: 20px;">Annuler</button>
+                <button mat-button class="btn-primary" (click)="openDialog()" style="margin-top: 20px;">Enregistrer</button>
+            </div>
+       
+        </form>
+
+
+
+ 

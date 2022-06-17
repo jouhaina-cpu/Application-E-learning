@@ -1,0 +1,75 @@
+
+        <form >
+            
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Annee </mat-label>
+                        <input type="text" matInput id="Annee" name="Annee">
+                    </mat-form-field>    
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Budget </mat-label>
+                        <input type="number" matInput id="Budget" name="Budget">
+                    </mat-form-field>    
+                </div>
+
+                
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Duree </mat-label>
+                        <input type="time" matInput id="Duree" name="Duree">
+                    </mat-form-field>    
+                </div>
+               
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Nombre de session </mat-label>
+                        <input type="number" matInput id="nb_session" name="nb_session">
+                    </mat-form-field>    
+                </div>
+
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Titre </mat-label>
+                        <input type="text" matInput id="Titre" name="Titre">
+                    </mat-form-field>    
+                </div>
+               
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Type </mat-label>
+                        <input type="text" matInput id="Type" name="Type">
+                    </mat-form-field>    
+                </div>
+               
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Domaine </mat-label>
+                        <input type="text" matInput id="Domaine" name="Domaine">
+                    </mat-form-field>    
+                </div>
+            </div>
+
+
+            <div>
+                <button mat-button class="btn-danger" TYPE="reset" style="margin-top: 20px;">Annuler</button>
+                <button mat-button class="btn-primary" (click)="openDialog()" style="margin-top: 20px;">Enregistrer</button>
+            </div>
+       
+        </form>
+
+
+
+ 

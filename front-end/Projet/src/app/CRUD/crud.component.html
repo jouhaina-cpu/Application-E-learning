@@ -1,0 +1,63 @@
+<div>
+        <div class="row" *ngIf="role[0]==='ROLE_ADMIN'">
+       <div class="inline">
+           <a routerLink="/Menu/Menu-Services/Menu-domaine"><img src="./../../assets/images/domaine.jpg" />
+               <h4> Gestion des domaines </h4>
+           </a>
+       </div>
+
+       <div class="inline" *ngIf="role[0]==='ROLE_ADMIN'">
+           <a routerLink="/Menu/Menu-Services/Menu-organisme"><img src="./../../assets/images/organisme.jpg" />
+               <h4>Gestion des organismes</h4>
+           </a>
+       </div>
+
+       <div class="inline" *ngIf="role[0]==='ROLE_ADMIN'">
+           <a routerLink="/Menu/Menu-Services/Menu-pays"><img src="./../../assets/images/pays.jpg" />
+               <h4>Gestion des pays</h4>
+           </a>
+       </div>
+    </div>
+
+
+    <br><br>
+
+    <div class="row" *ngIf="role[0]==='ROLE_USER'">
+       <div class="inline">
+        <a routerLink="/Menu/Menu-Services/Menu-formateur"><img src="./../../assets/images/formateur.jpg" />
+            <h4> Gestion des formateurs </h4>
+        </a>
+    </div>
+
+    <div class="inline" *ngIf="role[0]==='ROLE_USER'">
+        <a routerLink="/Menu/Menu-Services/Menu-formation"><img src="./../../assets/images/Formation.jpg" />
+            <h4>Gestion des formations</h4>
+        </a>
+    </div>
+
+    <div class="inline" *ngIf="role[0]==='ROLE_USER'">
+        <a routerLink="/Menu/Menu-Services/Menu-participant"><img src="./../../assets/images/participant.jpg" />
+            <h4>Gestion des participants</h4>
+        </a>
+    </div>
+</div>
+
+<br><br>
+
+
+<div class="row">
+    <div class="inline" *ngIf="role[0]==='ROLE_USER'">
+        <a routerLink="/Menu/Menu-Services/Menu-session-formation"><img src="./../../assets/images/session.jpg" />
+            <h6> Gestion des sessions de formations </h6>
+        </a>
+    </div>
+
+
+    <div class="inline" *ngIf="role[0]==='ROLE_ADMIN'">
+        <a routerLink="/Menu/Menu-Services/Menu-user"><img src="./../../assets/images/user.jpg" />
+            <h4>Gestion des utilisateurs</h4>
+        </a>
+    </div>
+
+   </div>
+   </div>

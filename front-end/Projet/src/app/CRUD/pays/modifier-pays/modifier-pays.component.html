@@ -1,0 +1,28 @@
+
+        <form >
+            
+            <div class="row">
+
+                <div class="col-md-3 mb-3">
+                    <mat-form-field>
+                        <mat-label for="Pays"> Pays </mat-label>
+                        <mat-select   id="Pays" name="Pays"placeholder="Pays" required>
+                            <mat-option value=" "></mat-option>
+                            <mat-option *ngFor="let Pays of pays" [value]="Pays.value">{{Pays.viewValue}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+               
+            </div>
+      
+
+            <div>
+                <button mat-button class="btn-danger" TYPE="reset" style="margin-top: 20px;">Annuler</button>
+                <button mat-button class="btn-primary" (click)="openDialog()" style="margin-top: 20px;">Enregistrer</button>
+            </div>
+       
+        </form>
+
+
+
+ 

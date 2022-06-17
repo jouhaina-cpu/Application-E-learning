@@ -1,0 +1,68 @@
+<div class="row">
+    
+    <div class="search-wrapper active" >
+        <div class="input-holder">
+            <input matInput (keyup)="applyFilter($event)" class="search-input" placeholder="Saisir pour chercher" #input>
+            <button class="search-icon"><span></span></button>
+        </div>
+    </div>
+
+</div>
+<br><br>
+<div class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="session" matSort>
+
+        <ng-container matColumnDef="ID">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Id </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="ID"> {{element.id}}</mat-cell>
+        </ng-container>
+ 
+        <ng-container matColumnDef="DateD">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Date de debut </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="DateD"> {{element.dateDebut}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="DateF">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Date Fin </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="DateF"> {{element.dateFin}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Lieu">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Lieu </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Lieu"> {{element.lieu}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Nbr_part">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Nombre de participant </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Nbr_part"> {{element.nbrParticipants}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Formateur">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Formateur </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Formateur"> {{element.formateur.nom}} </mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="Formation">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>Formation </mat-header-cell>
+            <mat-cell *matCellDef="let element" data-label="Formation"> {{element.formations.titre}} </mat-cell>
+        </ng-container>
+ 
+        <ng-container matColumnDef="Supprimer">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let element" style="text-align: center;">
+                <mat-icon routerLink="/Menu/Menu-Services/Menu-session-formation/Visualiser-session"title="Visualiser">remove_red_eye</mat-icon>
+                <mat-icon (click)="openDialog(element.id)" title="Supprimer" style="color: rgba(255, 0, 0, 0.664); margin-left: 15px;">delete </mat-icon>
+                <mat-icon title="Modifier" routerLink="/Menu/Menu-Services/Menu-session-formation/Modifer-session" style="color:blue;margin-left: 15px;">edit </mat-icon>
+            </mat-cell>
+        </ng-container>
+       
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    
+    </table>
+ 
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+ 
+</div> 
+ 

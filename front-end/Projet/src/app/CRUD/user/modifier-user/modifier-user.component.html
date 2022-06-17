@@ -1,0 +1,51 @@
+
+        <form >
+            
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field >
+                        <mat-label>Email</mat-label>
+                        <input type="text"matInput  id="Email" name="Email" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field >
+                        <mat-label>Mot de passe</mat-label>
+                        <input type="password"matInput  id="Password" name="Password" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Nom</mat-label>
+                        <input type="text"matInput  id="Nom" name="Nom" required>
+                    </mat-form-field>
+                </div>
+               
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input type="text"matInput  id="Username" name="Username" required>
+                    </mat-form-field>
+                </div>
+
+            </div>
+      
+
+            <div>
+                <button mat-button class="btn-danger" TYPE="reset" style="margin-top: 20px;">Annuler</button>
+                <button mat-button class="btn-primary" (click)="openDialog()" style="margin-top: 20px;">Enregistrer</button>
+            </div>
+       
+        </form>
+
+
+
+ 
